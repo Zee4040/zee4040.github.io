@@ -17,4 +17,6 @@ justify-content: center;
 text-shadow: 1px 1px 2px black;
 border-radius: 25px;
 border: 1px solid maroon;
+background: linear-gradient(to bottom right,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0.2) 100%),red;
+box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4), inset 2px 2px 5px rgba(255, 255, 255, 0.5), inset -2px -2px 5px rgba(0, 0, 0, 0.5); 
 }
