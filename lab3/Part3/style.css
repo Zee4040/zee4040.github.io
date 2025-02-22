@@ -95,4 +95,11 @@ a img {
   height: 10px;
 }
 
+nav li {
+  list-style: none;
+  border: 1px solid #a66;
+  color: #a66;
+  padding: 20px;
+  text-align: center;
+}
 
