@@ -1,6 +1,17 @@
 html {
-    font-family: sans-serif;
-  }
-  
-  /* Your CSS below here */
-  
+  font-family: sans-serif;
+}
+
+div {
+width: 200px;
+height: 200px;
+vertical-align: middle;
+text-align: center;
+margin: 0 auto;
+font-size: 1.125rem; /* an online converter named nekoCalc to convert pixel into rem */
+background-color: red;
+color: white;
+align-items: center;
+display: flex;
+justify-content: center;
+}
