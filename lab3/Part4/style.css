@@ -22,6 +22,7 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     max-width: 980px;
+    display: flex;
   }
   
   nav {
@@ -50,8 +51,12 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
   }
 
   .feature {
       width: 200px;
-  }
+      float: left;
+    }
