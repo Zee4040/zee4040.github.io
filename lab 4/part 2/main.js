@@ -23,6 +23,13 @@ for (let i = 0; i < imageFilenames.length; i++) {
   newImage.setAttribute('src', 'images/' + fileName);
   newImage.setAttribute('alt', imageAlts[fileName]);
   thumbBar.appendChild(newImage);
+
+/* Adding click event listener to update the displayed image */
+
+  newImage.addEventListener('click', () => {
+    displayedImage.setAttribute('src', 'images/' + fileName);
+    displayedImage.setAttribute('alt', imageAlts[fileName]);
+  });
 }
 
 /* Wiring up the Darken/Lighten button */
