@@ -33,9 +33,26 @@ class Ball {
         ctx.fillStyle = this.color;
         ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
         ctx.fill();
-      }  
+      } 
+      
+      update() {
+        // bounce off right and left walls
+        if ((this.x + this.size) >= width || (this.x - this.size) <= 0) {
+          this.velX = -this.velX;
+        }
+      
+        // bounce off top and bottom walls
+        if ((this.y + this.size) >= height || (this.y - this.size) <= 0) {
+          this.velY = -this.velY;
+        }
+      
+        // update position
+        this.x += this.velX;
+        this.y += this.velY;
+      }         
   }
 
+  
   
 
 
