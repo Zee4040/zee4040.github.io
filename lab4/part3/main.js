@@ -49,7 +49,22 @@ class Ball {
         // update position
         this.x += this.velX;
         this.y += this.velY;
-      }         
+      }
+      collisionDetect() {
+        for (const otherBall of balls) {
+          if (!(this === otherBall)) {
+            const dx = this.x - otherBall.x;
+            const dy = this.y - otherBall.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+      
+            if (distance < this.size + otherBall.size) {
+              this.color = randomRGB();
+              otherBall.color = randomRGB();
+            }
+          }
+        }
+      }
+               
   }
 
 const balls = [];
@@ -75,10 +90,16 @@ const balls = [];
     for (const ball of balls) {
       ball.draw();
       ball.update();
+      ball.collisionDetect();
     }
     requestAnimationFrame(loop);
   }
   loop();
+
+  
+  
+
+
   
 
 
