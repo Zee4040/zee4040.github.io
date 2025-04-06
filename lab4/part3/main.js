@@ -34,7 +34,7 @@ class Ball {
         ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
         ctx.fill();
       } 
-      
+
       update() {
         // bounce off right and left walls
         if ((this.x + this.size) >= width || (this.x - this.size) <= 0) {
@@ -51,6 +51,22 @@ class Ball {
         this.y += this.velY;
       }         
   }
+
+  const balls = [];
+  while (balls.length < 25) {
+    const size = random(10, 20);
+    const ball = new Ball(
+      random(0 + size, width - size),
+      random(0 + size, height - size),
+      random(-7, 7), 
+      random(-7, 7), 
+      randomRGB(),   
+      size
+    );
+  
+    balls.push(ball);
+  }
+  
 
   
   
