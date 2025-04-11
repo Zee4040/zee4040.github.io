@@ -33,10 +33,11 @@
         <li><a href="#">Blog</a></li>
       </ul>
 
-      <form class="search">
-        <input type="search" name="q" placeholder="Search query">
+      <form class="search" role="search" aria-label="Site Search">
+        <label for="search-input" class="sr-only">Search the site</label>
+        <input type="search" name="q" id="search-input" placeholder="Search query">
         <input type="submit" value="Go!">
-      </form>
+      </form>      
     </div>
 
     <main>
@@ -107,8 +108,9 @@
         <audio controls>
           <source src="media/bear.mp3" type="audio/mp3">
           <source src="media/bear.ogg" type="audio/ogg">
-          <p>It looks like your browser doesn't support HTML5 audio players.</p>
         </audio>
+        <p>It looks like your browser doesn't support HTML5 audio players.</p>
+          <a href="media/bear.mp3" download>Download the audio</a>
 
         <aside>
 
@@ -128,17 +130,17 @@
 
             <form class="comment-form">
               <div class="flex-pair">
-                Your name:
+                <label for="name">Your name:</label>
                 <input type="text" name="name" id="name" placeholder="Enter your name">
               </div>
               <div class="flex-pair">
-                Your comment:
+                <label for="comment">Your comment:</label>
                 <input type="text" name="comment" id="comment" placeholder="Enter your comment">
               </div>
               <div>
                 <input type="submit" value="Submit comment">
               </div>
-            </form>
+            </form>            
 
             <font size="6">Comments</font>
 
